@@ -43,9 +43,31 @@ var newView = Ti.UI.createView({
 	backgroundColor: "#003366"
 });
 
+var countWindow = Ti.UI.createWindow({
+	backgroundcolor: "#d3d3d3",
+	title: "Inventory Count"
+});
+
+var countView = Ti.UI.createView({
+	backgroundColor: "#003366"
+});
+
+var changeWindow = Ti.UI.createWindow({
+	backgroundColor: "d3d3d3",
+	title: "Change Count"
+});
+
+var changeView = Ti.UI.createView({
+	backgroundColor: "#003366"
+});
+
+countWindow.add(countView);
+changeWindow.add(changeView);
+
 //End Windows and Views
 
 var loadFile = require("signup");
+var loadExtra = require("count");
 
 newWindow.add(newView);
 navWindow.open();

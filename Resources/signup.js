@@ -173,6 +173,8 @@ var signupButton = Ti.UI.createLabel({
 
 //functions - main screen
 
+
+
 var userCheck = function(){
 	if(userField.value === ""){
 		alert("No username entered!");
@@ -188,7 +190,9 @@ var passCheck = function (){
 	if(passField.value.length < 6){
 		alert("Password must be 6 characters long.");
 	}else if (passField.value.length >= 6){
+		countOpen();
 		alert("Successful login!");
+		
 	};
 };
 
@@ -232,6 +236,11 @@ var passVerifyCheck = function(){
 var signupOpen = function(){
 	navWindow.openWindow(newWindow);
 };
+
+var countOpen = function(){
+	navWindow.openWindow(countWindow);
+};
+
 
 loginButton.addEventListener("click", userCheck);
 createButton.addEventListener("click", signupOpen);
